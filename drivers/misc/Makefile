@@ -99,4 +99,9 @@ obj-$(CONFIG_TIMA_LOG)		+= tima_debug_log.o
 obj-$(CONFIG_CHECK_SIMSLOT_COUNT) += sim_slot.o
 obj-$(CONFIG_SEC_MODEM) += modem_if/
 
+<<<<<<< HEAD
 obj-$(CONFIG_DUALWAVE) += dualwave/
+=======
+# Touchwake
+obj-$(CONFIG_TOUCH_WAKE)        += touch_wake.o
+>>>>>>> dbd2d7f... TouchWake implementation v1.4b (Yank555.lu)
