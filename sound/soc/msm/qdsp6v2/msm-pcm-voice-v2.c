@@ -663,8 +663,13 @@ static struct snd_kcontrol_new msm_voice_controls[] = {
 #endif	/* CONFIG_SEC_DHA_SOL_MAL */
 	SOC_SINGLE_EXT("Loopback Enable", SND_SOC_NOPM, 0, 1, 0,
 				msm_loopback_get, msm_loopback_put),
+<<<<<<< HEAD
 	SOC_SINGLE_EXT("Roaming Enable", SND_SOC_NOPM, 0, 1, 0,
 			msm_roaming_get, msm_roaming_put),
+=======
+	// Dummy control to expose stereo recording support in kernel to user-space
+	SOC_SINGLE_EXT("Stereo Recording", SND_SOC_NOPM, 0, VSID_MAX, 0, NULL, NULL),
+>>>>>>> cdf9368... 2-way stereo call recording patch for msm8974 [Wootever]
 };
 
 static struct snd_pcm_ops msm_pcm_ops = {
