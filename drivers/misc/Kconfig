@@ -1002,10 +1002,17 @@ config NFC_PN547
 	  It is used by many services. NFC is fully controlled using I2C
 	  to communicate the AP chip.
 
+<<<<<<< HEAD
 config NFC_PN547_PMC8974_CLK_REQ
 	bool "NXP PN547 NFC Controller Driver"
 	depends on I2C
 	default n
+=======
+<<<<<<< HEAD
+config D2_TIMA_LOG
+	tristate "Log dumping support for 8960 D2 TIMA"
+        default n
+>>>>>>> d2a912b... Gamma Control [CM]
 	help
 	  PM8941 Clock request for NXP PN547 Near Field
 	  Communication controller support.
@@ -1069,6 +1076,15 @@ config SGLTE_QSC_MODEM
 	help
 	  This option enables SGLTE QSC Modem download.	  
 
+=======
+config GAMMA_CONTROL
+	bool "Gamma Control for OLED"
+	depends on FB_MSM_MIPI_DSI_SAMSUNG_OCTA
+	default y
+	help
+		This adds full support for shifting RGB panel colors.
+	  
+>>>>>>> 012bb72... Gamma Control [CM]
 source "drivers/misc/c2port/Kconfig"
 source "drivers/misc/eeprom/Kconfig"
 source "drivers/misc/cb710/Kconfig"

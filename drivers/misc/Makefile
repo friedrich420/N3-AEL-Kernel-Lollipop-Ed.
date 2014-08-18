@@ -96,7 +96,15 @@ obj-$(CONFIG_MAX77888_MUIC)	+= max77888-muic.o
 endif
 obj-$(CONFIG_SEC_FPGA_ICE40XX)	+= ice40xx.o
 obj-$(CONFIG_TIMA_LOG)		+= tima_debug_log.o
+<<<<<<< HEAD
 obj-$(CONFIG_CHECK_SIMSLOT_COUNT) += sim_slot.o
 obj-$(CONFIG_SEC_MODEM) += modem_if/
 
 obj-$(CONFIG_DUALWAVE) += dualwave/
+=======
+<<<<<<< HEAD
+obj-$(CONFIG_MPU_411_ENABLE)	+= inv_mpu/
+=======
+obj-$(CONFIG_GAMMA_CONTROL) 	+= gamma_control.o
+>>>>>>> 012bb72... Gamma Control [CM]
+>>>>>>> d2a912b... Gamma Control [CM]

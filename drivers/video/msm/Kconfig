@@ -232,6 +232,34 @@ config FB_MSM_MIPI_DSI_TC358764_DSI2LVDS
 	  and up to WUXGA 1920x1200 18-bit
 	  using a dual LVDS link.
 
+<<<<<<< HEAD
+=======
+config FB_MSM_MIPI_DSI_RENESAS_TFT
+	bool
+	select FB_MSM_MIPI_DSI
+	default n
+
+config FB_MSM_MIPI_DSI_SAMSUNG_OCTA
+	bool
+	select FB_MSM_MIPI_DSI
+	select GAMMA_CONTROL
+	default n
+
+config FB_MSM_MIPI_DSI_SAMSUNG_OLED
+	bool
+	select FB_MSM_MIPI_DSI
+	default n
+config FB_MSM_MIPI_SAMSUNG_OLED_VIDEO_QHD_PT
+	bool
+	select FB_MSM_MIPI_DSI_SAMSUNG_OLED
+	default n
+
+config FB_MSM_MIPI_HX8389B_TFT_VIDEO_QHD_PT
+	bool
+	select FB_MSM_MIPI_DSI_HX8389BDS15_TFT
+	default n
+
+>>>>>>> d2a912b... Gamma Control [CM]
 config FB_MSM_LCDC_ST15_WXGA
     bool
     select FB_MSM_LCDC_PANEL
