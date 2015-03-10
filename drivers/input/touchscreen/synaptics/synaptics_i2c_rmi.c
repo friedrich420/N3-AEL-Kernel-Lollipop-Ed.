@@ -223,8 +223,6 @@ static struct device_attribute attrs[] = {
 			synaptics_rmi4_suspend_store),
 };
 
-<<<<<<< HEAD
-=======
 extern unsigned int system_rev;
 
 static struct list_head exp_fn_list;
@@ -238,7 +236,6 @@ static struct synaptics_rmi4_data *touchwake_data = NULL;
 int previous_touch_state = false;
 #endif
 
->>>>>>> dbd2d7f... TouchWake implementation v1.4b (Yank555.lu)
 #ifdef READ_LCD_ID
 static int synaptics_lcd_id;
 static int __init synaptics_read_lcd_id(char *mode)
@@ -1811,8 +1808,6 @@ static int synaptics_rmi4_f12_abs_report(struct synaptics_rmi4_data *rmi4_data,
 		synaptics_set_dvfs_lock(rmi4_data, 0);
 #endif
 
-<<<<<<< HEAD
-=======
 	if (touch_count == 0) {
 		retval = synaptics_rmi4_i2c_read(rmi4_data,
 				rmi4_data->f01_data_base_addr,
@@ -1838,7 +1833,6 @@ static int synaptics_rmi4_f12_abs_report(struct synaptics_rmi4_data *rmi4_data,
 	}
 #endif
 
->>>>>>> dbd2d7f... TouchWake implementation v1.4b (Yank555.lu)
 	return touch_count;
 }
 
@@ -5397,8 +5391,6 @@ err_tsp_reboot:
 /* turn off touch IC, will be turned by InputRedaer */
 	synaptics_rmi4_stop_device(rmi4_data);
 #endif
-<<<<<<< HEAD
-=======
 
 #ifdef TSP_INIT_COMPLETE
 	complete_all(&rmi4_data->init_done);
@@ -5411,7 +5403,6 @@ err_tsp_reboot:
 	if (touchwake_data == NULL)
 		pr_err("[TOUCHWAKE] Failed to set Synaptics touchwake_data\n");
 #endif 
->>>>>>> dbd2d7f... TouchWake implementation v1.4b (Yank555.lu)
 	return retval;
 
 #if defined(CONFIG_LEDS_CLASS) && defined(TOUCHKEY_ENABLE)
