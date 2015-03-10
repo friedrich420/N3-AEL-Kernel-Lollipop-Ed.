@@ -5765,8 +5765,9 @@ static int synaptics_rmi4_input_open(struct input_dev *dev)
 	struct synaptics_rmi4_data *rmi4_data = input_get_drvdata(dev);
 	int retval;
 
+<<<<<<< HEAD
 	dev_info(&rmi4_data->i2c_client->dev, "%s %s\n", __func__, rmi4_data->use_deepsleep ? "wakeup" : "");
-
+=======
 #ifdef CONFIG_TOUCH_WAKE
 	#ifdef TOUCHWAKE_DEBUG_PRINT
 	pr_info("[TOUCHWAKE] Synaptics input open\n");
@@ -5776,6 +5777,7 @@ static int synaptics_rmi4_input_open(struct input_dev *dev)
 #ifdef TSP_INIT_COMPLETE
 	retval = wait_for_completion_interruptible_timeout(&rmi4_data->init_done,
 			msecs_to_jiffies(90 * MSEC_PER_SEC));
+>>>>>>> 96f7e7f... TouchWake implementation v1.5 (Yank555.lu)
 
 	gpio_tlmm_config(GPIO_CFG(rmi4_data->dt_data->scl_gpio, 3, GPIO_CFG_INPUT, GPIO_CFG_NO_PULL, GPIO_CFG_2MA), 1);
 	gpio_tlmm_config(GPIO_CFG(rmi4_data->dt_data->sda_gpio, 3, GPIO_CFG_INPUT, GPIO_CFG_NO_PULL, GPIO_CFG_2MA), 1);
@@ -5795,6 +5797,7 @@ static void synaptics_rmi4_input_close(struct input_dev *dev)
 {
 	struct synaptics_rmi4_data *rmi4_data = input_get_drvdata(dev);
 
+<<<<<<< HEAD
 	dev_info(&rmi4_data->i2c_client->dev, "%s %s\n", __func__, rmi4_data->use_deepsleep ? "deepsleep" : "");
 
 	if (rmi4_data->use_deepsleep) {
@@ -5806,7 +5809,7 @@ static void synaptics_rmi4_input_close(struct input_dev *dev)
 		gpio_tlmm_config(GPIO_CFG(rmi4_data->dt_data->scl_gpio, 0, GPIO_CFG_INPUT, GPIO_CFG_PULL_DOWN, GPIO_CFG_2MA), 1);
 		gpio_tlmm_config(GPIO_CFG(rmi4_data->dt_data->sda_gpio, 0, GPIO_CFG_INPUT, GPIO_CFG_PULL_DOWN, GPIO_CFG_2MA), 1);
 	}
-
+=======
 #ifdef CONFIG_TOUCH_WAKE
 	// Don't change state if touchwake handles this
 	if (!touchwake_is_active()) {
@@ -5825,6 +5828,7 @@ static void synaptics_rmi4_input_close(struct input_dev *dev)
 		#endif
 	}
 #endif
+>>>>>>> 96f7e7f... TouchWake implementation v1.5 (Yank555.lu)
 }
 #endif
 
