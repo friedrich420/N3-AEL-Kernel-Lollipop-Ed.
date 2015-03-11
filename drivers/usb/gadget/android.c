@@ -84,17 +84,10 @@
 #else
 #include "f_mtp.c"
 #endif
-#include "f_accessory.c"
 #include "f_hid.h"
 #include "f_hid_android_keyboard.c"
 #include "f_hid_android_mouse.c"
-<<<<<<< HEAD
 #include "f_accessory.c"
-=======
-#ifdef CONFIG_USB_ANDROID_SAMSUNG_SIDESYNC
-#include "f_conn_gadget.c"
-#endif
->>>>>>> bdb3979... USB KEYBOARD/MOUSE: fix compile error
 #define USB_ETH_RNDIS y
 #include "f_rndis.c"
 #include "rndis.c"
