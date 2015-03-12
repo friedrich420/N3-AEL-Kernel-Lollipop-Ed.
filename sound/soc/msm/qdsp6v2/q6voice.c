@@ -4076,20 +4076,8 @@ static int voice_cvs_start_record(struct voice_data *v, uint32_t rec_mode)
 		cvs_start_record.hdr.token = 0;
 		cvs_start_record.hdr.opcode = VSS_IRECORD_CMD_START;
 
-<<<<<<< HEAD
-		// In order to enable stereo recording,
-		// i.e. TX on the left and RX on the right
-		// the respective ports need to be explicitly specified:
-		// INCALL_RECORD_TX => 0x8003
-		// INCALL_RECORD_RX => 0x8004
-		/*cvs_start_record.rec_mode.port_id =
-					VSS_IRECORD_PORT_ID_DEFAULT; */
-		//cvs_start_record.rec_mode.port_id =
-					//VSS_IRECORD_PORT_ID_TX_RX;
-=======
 		cvs_start_record.rec_mode.port_id =
 					VSS_IRECORD_PORT_ID_DEFAULT;
->>>>>>> parent of a2684e7... 2-way stereo call recording patch for msm8974 [Wootever]
 		if (rec_mode == VOC_REC_UPLINK) {
 			cvs_start_record.rec_mode.rx_tap_point =
 					VSS_IRECORD_TAP_POINT_NONE;
